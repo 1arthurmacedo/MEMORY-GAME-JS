@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background-color: rgb(36, 85, 175);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+div > p {
+  font-size: 15em;
+  align-content: center;
+  text-align: center;
+  display: block;
+}
+div > p:hover {
+   cursor: pointer;
+}
+span { 
+  text-align: center;
+  margin: 10px;
+  color: white;
+  display: block;
+  font-size: 2em;
+}
+footer {
+  text-align: center;
+  font-style: italic;
+  margin: 10px;
+  color: white;
+}
+div {
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+}
+div > div > span {
+  width: 80px;
+  height: 80px;
+  align-content: center;
+  flex-shrink: 0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}     
+div > div {
+  justify-content: center;
+  flex-shrink: 0;
+  align-content: center;
+  height: 435px;
+  width: 435px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: none;
+}
+div > div > span.primeira {
+  background-image: url(imagens/primeira.jpg); 
+}
+div > div > span.segunda {
+  background-image: url(imagens/segunda.jpg);
+}
+div > div > span.terceira {
+  background-image: url(imagens/terceira.jpg);
+}
+div > div > span.quarta {
+  background-image: url(imagens/quarta.jpg);
+}
+div > div > span.quinta {
+  background-image: url(imagens/quinta.jpg);
+}
+div > div > span.sexta {
+  background-image: url(imagens/sexta.jpg);
+}
+div > div > span.setima {
+  background-image: url(imagens/setima.jpg);
+}
+div > div > span.oitava {
+  background-image: url(imagens/oitava.jpg);
+}
