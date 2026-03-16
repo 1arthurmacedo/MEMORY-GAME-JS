@@ -48,6 +48,9 @@ const imagem7 = 'url(imagens/setima.jpg)'
 const imagem8 = 'url(imagens/oitava.jpg)'
 const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8]
 
+let verificacao = []
+
+
 function random(array = [], imagens = []) {
   let salvar = []  
   for (let i = 0 ; i < 2 ; i++) {
@@ -63,10 +66,30 @@ function random(array = [], imagens = []) {
   return salvar
 }
 
-function escolher() {
-  let escolha = this
-  escolha.style.backgroundColor = 'transparent'
-  
+function escolher(carta) {
+  if (carta.style.backgroundColor == 'black') {
+    if (verificacao.length < 2) {
+      carta.style.backgroundColor = 'transparent' 
+      verificacao.push(carta)
+      if (verificacao.length == 2) {
+        if (verificacao[0].style.backgroundImage == verificacao[1].style.backgroundImage) {
+          alert("Você encontrou pares!")
+          verificacao == []
+        } else {
+          alert("Não são pares!")
+          verificacao[0].style.backgroundColor = 'black' 
+          verificacao[1].style.backgroundColor = 'black'
+        }
+      }
+    } else {
+      alert('a')
+    }
+  } else {
+    alert("Essa carta já foi descoberta!")
+  }
+  if (verificacao.length == 2) {
+    verificacao.length = 0
+  }
 }
 
 function play() { 
