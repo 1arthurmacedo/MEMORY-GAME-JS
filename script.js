@@ -49,7 +49,9 @@ const imagem8 = 'url(imagens/oitava.jpg)'
 const imagens = [imagem1, imagem2, imagem3, imagem4, imagem5, imagem6, imagem7, imagem8]
 
 let verificacao = []
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function random(array = [], imagens = []) {
   let salvar = []  
@@ -70,6 +72,7 @@ function escolher(carta) {
   if (carta.style.backgroundColor == 'black') {
     if (verificacao.length < 2) {
       carta.style.backgroundColor = 'transparent' 
+      await sleep(500)
       verificacao.push(carta)
       if (verificacao.length == 2) {
         if (verificacao[0].style.backgroundImage == verificacao[1].style.backgroundImage) {
@@ -81,9 +84,7 @@ function escolher(carta) {
           verificacao[1].style.backgroundColor = 'black'
         }
       }
-    } else {
-      alert('a')
-    }
+    } 
   } else {
     alert("Essa carta já foi descoberta!")
   }
